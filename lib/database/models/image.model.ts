@@ -23,10 +23,10 @@ export interface IImage extends Document {
 }
 
 const ImageSchema = new Schema({
-  title: { type: String, required: true },
-  transformationType: { type: String, required: true },
-  publicld: { type: String, required: true },
-  secureUrl: { type: String, required: true },
+  title: { type: String},
+  transformationType: { type: String},
+  publicld: { type: String },
+  secureUrl: { type: String },
   width: { type: Number },
   height: { type: Number },
   config: { type: Object },
