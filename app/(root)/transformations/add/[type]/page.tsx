@@ -6,9 +6,7 @@ import { auth } from "@clerk/nextjs/server";
 import { getUserById } from "@/lib/actions/user.actions";
 import { redirect } from "next/navigation";
 
-const AddTransformationTypePage = async ({
-  params: { type },
-}: SearchParamProps) => {
+const AddTransformationTypePage = async ({ params: { type },}: SearchParamProps) => {
   const { userId } = auth();
   if (!userId) redirect("/sign-in");
   const user = await getUserById(userId);
